@@ -8,8 +8,8 @@ shinyUI(
                          input of the loan amount, interest rate, and term in months.')
       ),
     mainPanel(
-      numericInput('principal', 'Principal Amount (USD)', 10000),
-      numericInput('interest', 'Interest Rate (ex. 4.0)', 4.0),
+      numericInput('principal', 'Principal Amount (USD)', 10000, step = 500),
+      numericInput('interest', 'Interest Rate (ex. 4.0)', 4.0, step = 0.1),
       numericInput('months', 'Months', 60),
       submitButton('Submit'),      
       h3('Monthly Payment'),

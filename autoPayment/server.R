@@ -1,7 +1,7 @@
-monthPayment <- function(principal, interest, months) {
-  interest <- interest/100
-  payment <- (principal*(interest/12))/(1-(1+interest/12)^-months)
-  return(payment)
+monthPayment <- function(p, r, m) {
+  r <- r/100
+  payment <- (p*(r/12))/(1-(1+r/12)^-m)
+  return(round(payment,2))
 }
 
 shinyServer(

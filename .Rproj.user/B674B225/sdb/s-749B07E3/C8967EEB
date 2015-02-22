@@ -1,0 +1,16 @@
+{
+    "contents" : "Auto Loan Payment Calculator\n========================================================\nauthor: Erich Donahue\ndate: 2015-02-22\nfont-family: 'Georgia'\n\nObjective\n========================================================\nThis web application allows users to enter their desired loan terms and receive an estimated montly payment.\n\nInputs required are:\n- Prinicipal Loan Amount\n- Interest Rate\n- Term, in months\n\nCalculation\n========================================================\n\nThe application uses a common mathematical formula to estimate the monthly payment of an auto loan.\nThe calculation is performed entirely with a principal amount, down payments are not considered.\nA fixed rate during the life of the loan is assumed.\n\nThe formula I used is:\n\n$\\frac{p(r/12)}{1-(1+r/12)^{-t}}$\n\n\n   \n<small> More info can be found at:\nhttp://teachertech.rice.edu/Participants/bchristo/lessons/carpaymt.html\n</small>\n\nR Code\n========================================================\n\nTo provide the calculation for the application I built the following formula:\n```{r, echo=TRUE}\nmonthPayment <- function(p, r, m) {\n  r <- r/100\n  payment <- (p*(r/12))/(1-(1+r/12)^-m)\n  return(round(payment,2))\n}\n```\nThis code accepts the three numeric inputs (preferred forms of decimal, decimal, integer) and returns a rounded dollar amount.\n\n\nExample Run\n========================================================\nAs an example, let's estimate a monthly payment given the following loan terms:\n- Loan Amount: 20000\n- Interest Rate: 4.2%\n- Term, in months: 60\n\nGiven the above terms the calculator would estimate a monthly payment of:\n```{r}\nmonthPayment(20000, 4.2, 60)\n```\n",
+    "created" : 1424629276724.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2168346716",
+    "id" : "C8967EEB",
+    "lastKnownWriteTime" : 1424632031,
+    "path" : "~/Coursera/DevDataproducts_Project/autoPayment/autoPayApp.Rpres",
+    "project_path" : "autoPayment/autoPayApp.Rpres",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_presentation"
+}

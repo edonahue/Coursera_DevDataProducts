@@ -1,0 +1,17 @@
+{
+    "contents" : "monthPayment <- function(principal, interest, months) {\n  interest <- interest/100\n  payment <- (principal*(interest/12))/(1-(1+interest/12)^-months)\n  return(payment)\n}",
+    "created" : 1424590223721.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "920158739",
+    "id" : "B726DEEF",
+    "lastKnownWriteTime" : 80,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

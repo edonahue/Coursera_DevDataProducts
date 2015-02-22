@@ -1,0 +1,16 @@
+{
+    "contents" : "shinyUI(\n  pageWithSidebar(\n    #Calculator for auto loan monthly payment amount \n    headerPanel(\"Auto Loan Monthly Payment\"),\n    sidebarPanel(\n      h3('Description'),\n      h4('This application was built to allow for the calculaiton of a monthly auto loan payment given \n                         input of the loan amount, interest rate, and term in months.')\n      ),\n    mainPanel(\n      numericInput('principal', 'Principal Amount (USD)', 10000, step = 500),\n      numericInput('interest', 'Interest Rate (ex. 4.0)', 4.0, step = 0.1),\n      numericInput('months', 'Months', 60),\n      submitButton('Submit'),      \n      h3('Monthly Payment'),\n      h4('You entered principal, rate and term of: '),\n      verbatimTextOutput(\"loan_terms\"),\n      h4('Your payment will be: '),\n      verbatimTextOutput(\"pmt\")\n      )\n    )\n  )",
+    "created" : 1424593051728.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1898249620",
+    "id" : "FD2E8AD6",
+    "lastKnownWriteTime" : 1424629159,
+    "path" : "~/Coursera/DevDataproducts_Project/autoPayment/ui.R",
+    "project_path" : "autoPayment/ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

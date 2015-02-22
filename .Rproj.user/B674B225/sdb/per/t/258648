@@ -1,0 +1,16 @@
+{
+    "contents" : "monthPayment <- function(p, r, m) {\n  r <- r/100\n  payment <- (p*(r/12))/(1-(1+r/12)^-m)\n  return(round(payment,2))\n}\n\nshinyServer(\n  function(input, output) {\n    output$prin <- renderPrint({input$principal})\n    output$int <- renderPrint({input$interest})\n    output$term <- renderPrint({input$months})\n    output$loan_terms <- renderPrint({paste(input$principal, input$interest, input$months, sep = \", \")})\n    output$pmt <- renderPrint({monthPayment(input$principal, input$interest, input$months)})\n  }\n)",
+    "created" : 1424593044357.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1915293959",
+    "id" : "258648",
+    "lastKnownWriteTime" : 1424630860,
+    "path" : "~/Coursera/DevDataproducts_Project/autoPayment/server.R",
+    "project_path" : "autoPayment/server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
